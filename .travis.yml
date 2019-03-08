@@ -5,7 +5,7 @@ python:
 #  - git clone https://github.com/chris104957/django-carrot.git -b $TRAVIS_BRANCH
 #  - cd django-carrot
 #  - pip install -r requirements.txt
-install:
+script:
   - python setup.py bdist_wheel
 
 deploy:
