@@ -3,6 +3,7 @@ python:
   - "3.6"
 script:
   - python setup.py bdist_wheel sdist
+
 deploy:
   provider: pypi
   user: $PACKAGR_USERNAME
