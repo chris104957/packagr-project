@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.6"
+#before_install:
+#  - git clone https://github.com/chris104957/django-carrot.git -b $TRAVIS_BRANCH
+#  - cd django-carrot
+#  - pip install -r requirements.txt
+install:
+  - python setup.py sdist
+  - pip install --upgrade dist/*.gz
+  - pip install django==$DJANGO_VERSION
+deploy:
+  - provider: pypi
+    user: $PACKAGR_USERNAME
+    password: $PACKAGR_PASSWORD
+    server: $PACKAGR_REPOSITORY_URL
+    on:
+      tags: true
