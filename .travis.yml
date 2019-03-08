@@ -6,7 +6,7 @@ python:
 #  - cd django-carrot
 #  - pip install -r requirements.txt
 install:
-  - python setup.py sdist
+  - python setup.py sdist bdist_wheel
 deploy:
   - provider: pypi
     user: $PACKAGR_USERNAME
