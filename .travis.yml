@@ -7,8 +7,6 @@ python:
 #  - pip install -r requirements.txt
 install:
   - python setup.py sdist
-  - pip install --upgrade dist/*.gz
-  - pip install django==$DJANGO_VERSION
 deploy:
   - provider: pypi
     user: $PACKAGR_USERNAME
