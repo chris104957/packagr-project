@@ -7,10 +7,11 @@ python:
 #  - pip install -r requirements.txt
 install:
   - python setup.py bdist_wheel
+
 deploy:
-  - provider: pypi
-    user: $PACKAGR_USERNAME
-    password: $PACKAGR_PASSWORD
-    server: $PACKAGR_REPOSITORY_URL
-    on:
-      tags: true
+  provider: pypi
+  user: $PACKAGR_USERNAME
+  password: $PACKAGR_PASSWORD
+  server: $PACKAGR_REPOSITORY_URL
+  on:
+    tags: true
